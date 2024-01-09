@@ -54,7 +54,7 @@ BuildRequires:	xsltproc
 BuildRequires:	boost-devel
 BuildRequires:	sasl-devel
 BuildRequires:	pkgconfig(x11)
-Requires:	kdepim-runtime
+Requires:	plasma6-kdepim-runtime
 
 %description
 KNotes aims to be a useful and full featured notes application for
