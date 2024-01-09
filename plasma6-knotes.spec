@@ -54,7 +54,6 @@ BuildRequires:	xsltproc
 BuildRequires:	boost-devel
 BuildRequires:	sasl-devel
 BuildRequires:	pkgconfig(x11)
-Requires:	akonadi-notes-agent
 Requires:	kdepim-runtime
 
 %description
@@ -62,7 +61,7 @@ KNotes aims to be a useful and full featured notes application for
 the KDE project. It tries to be as fast and lightweight as possible
 although including some advanced features.
 
-%files -f all.lang
+%files -f knotes.lang
 %{_datadir}/applications/org.kde.knotes.desktop
 %{_bindir}/knotes
 %{_datadir}/config.kcfg/knotesglobalconfig.kcfg
@@ -90,19 +89,6 @@ although including some advanced features.
 %{_qtdir}/plugins/pim6/kcms/summary/kcmknotessummary.so
 %{_libdir}/libknotesprivate.so*
 %{_libdir}/libnotesharedprivate.so*
-
-#-----------------------------------------------------------------------------
-
-%package -n akonadi-notes-agent
-Summary:	Akonadi notes agent
-Group:		Graphical desktop/KDE
-Requires:	knotes
-
-%description -n akonadi-notes-agent
-Akonadi notes agent. It adds notes received via network and handles note
-alarm notifications.
-
-%files -n akonadi-notes-agent -f akonadi_notes_agent.lang
 %{_bindir}/akonadi_notes_agent
 %{_datadir}/akonadi/agents/notesagent.desktop
 %{_docdir}/*/*/akonadi_notes_agent
@@ -122,8 +108,4 @@ alarm notifications.
 %install
 %ninja_install -C build
 
-%find_lang knotes
-%find_lang libnoteshared
-cat *.lang >all.lang
-
-%find_lang akonadi_notes_agent
+%find_lang knotes --all-name
