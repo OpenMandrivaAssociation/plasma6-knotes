@@ -2,7 +2,7 @@
 
 Summary:	KDE notes application
 Name:		plasma6-knotes
-Version:	24.01.90
+Version:	24.01.95
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
