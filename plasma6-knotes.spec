@@ -9,7 +9,7 @@ Version:	24.05.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/pim/knotes/-/archive/%{gitbranch}/knotes-%{gitbranchd}.tar.bz2#/knotes-%{git}.tar.bz2
 %else
